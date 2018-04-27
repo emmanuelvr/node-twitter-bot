@@ -1,0 +1,22 @@
+{
+  "name": "twitterbots",
+  "version": "1.0.0",
+  "description": "Twitter Bot",
+  "main": "app.js",
+  "scripts": {
+    "dev": "babel-node src/app.js",
+    "build": "npm run clean && babel src/ -d build/",
+    "prod": "node build/app.js",
+    "clean": "rimraf build"
+  },
+  "author": "Emmanuel Villalobos",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "twit": "^2.2.9"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2"
+  }
+}
