@@ -10,7 +10,7 @@ export default class Tweet {
 
     start() {
         if(this.tweets.length == 0) {
-            console.error('Can\'t start queue without tweets. Add new tweets to queue using method addTweet().');
+            console.error('Can\'t start queue without tweets.');
             return;
         }
 
@@ -46,13 +46,5 @@ export default class Tweet {
 
     tweet(tweet) {
         this.conn.post('statuses/update', { status: tweet }, this.handleTweet);
-    }
-
-    addTweet(tweet) {
-        this.tweets.push(tweet);
-    }
-
-    clearTweets() {
-        this.tweets = [];
     }
 }

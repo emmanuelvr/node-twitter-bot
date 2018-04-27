@@ -1,10 +1,8 @@
 export default class RetweetBot {
 
     constructor(conn, params, followRetweetedUser = false) {
-
+        // Setup initial values
         this.conn = conn; // Twit instance
-
-        // Options setup
         this.params = params;
         this.followRetweetedUser = followRetweetedUser;
     }
@@ -43,7 +41,7 @@ export default class RetweetBot {
                 console.error('Something went wrong following an user.');
                 return;
             }
-            console.log(`Now following: @${screen_name}`);
+            console.log(`Now following: @${screen_name}.`);
         });
     }
 
